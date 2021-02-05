@@ -6,7 +6,17 @@ interface infoInterface{
   age?: number;
   profession?: string;
 }
+
+export function getServerSideProps(){
+  console.log(process.env.SECRET," inside serverside props");
+  console.log(process.env.NEXT_PUBLIC_OPEN_SECRET," inside serverSideProps");
+  return {
+    props:{}
+  }
+};
 export default function Home() {
+  console.log(process.env.SECRET," inside front end");
+  console.log(process.env.NEXT_PUBLIC_OPEN_SECRET," inside front end");
   const [info,setInfo] = useState<infoInterface>({});
   const clickHandler = async () =>{
     const body = {
