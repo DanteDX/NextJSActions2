@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import House from "./house/index";
+import House from "./house";
 import axios from "axios";
 interface infoInterface{
   name?: string;
