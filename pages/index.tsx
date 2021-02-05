@@ -40,6 +40,7 @@ export default function Home() {
         )
       }
       <button onClick={e => clickHandler()} className="rounded p-2 m-2 bg-gray-600 font-bold">Click me to submit</button>
+      
     </div>
   )
 }
