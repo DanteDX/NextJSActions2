@@ -1,4 +1,4 @@
-import {GetStaticProps} from "next";
+import {GetStaticProps,GetStaticPaths} from "next";
 import React from "react";
 
 export const getStaticProps:GetStaticProps = async(context) =>{
@@ -7,6 +7,7 @@ export const getStaticProps:GetStaticProps = async(context) =>{
         revalidate:10
     }
 };
+
 
 const Special = (props) =>{
     return(
