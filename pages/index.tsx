@@ -1,13 +1,14 @@
 import React,{useState} from 'react';
 import House from "./house";
 import axios from "axios";
+import {GetServerSideProps} from "next";
 interface infoInterface{
   name?: string;
   age?: number;
   profession?: string;
 }
 
-export function getServerSideProps(){
+export const getServerSideProps:GetServerSideProps = async(context) =>{
   console.log(process.env.SECRET," inside serverside props");
   console.log(process.env.NEXT_PUBLIC_OPEN_SECRET," inside serverSideProps");
   return {
